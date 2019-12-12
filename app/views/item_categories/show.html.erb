@@ -1,0 +1,17 @@
+<h1>Show ItemCategory</h1>
+<table>
+  <thead>
+  <tr>
+    <th>ItemCategoryID</th>
+    <th>Name</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <td><%= @item_category.id %></td>
+    <td><%= @item_category.name %></td>
+  </tr>
+  </tbody>
+</table>
+<%= link_to "Back", item_categories_path %>

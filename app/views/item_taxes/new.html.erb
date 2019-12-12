@@ -1,0 +1,15 @@
+<%= form_for @item_tax, url: {action: "create"} do |f| %>
+  <% if @item_tax.errors.any? %>
+    <% @item_tax.errors.full_messages.each do |message| %>
+      <li class="error_message"><%= message %></li>
+    <% end %>
+  <% end %>
+  <%= f.label :ItemId %>
+  <%= f.text_field :item_id %>
+  <%= f.label :TaxType %>
+  <%= f.text_field :tax_type %>
+  <%= f.label :Tax %>
+  <%= f.text_field :tax %>
+  <%= f.submit "Create ItemTax" %>
+<% end %>
+<%= link_to "Back", item_taxes_path %>

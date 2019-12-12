@@ -1,0 +1,20 @@
+<h1>Show ItemTax</h1>
+<table>
+  <thead>
+  <tr><th>ItemTaxID</th>
+    <th>ItemID</th>
+    <th>TaxType</th>
+    <th>Tax</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <td><%= @item_tax.id %></td>
+    <td><%= @item_tax.item_id %></td>
+    <td><%= @item_tax.tax_type %></td>
+    <td><%= @item_tax.tax %></td>
+  </tr>
+  </tbody>
+</table>
+<%= link_to "Back", item_taxes_path %>

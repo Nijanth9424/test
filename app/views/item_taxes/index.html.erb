@@ -1,0 +1,33 @@
+<h1>Listing ItemTax</h1>
+<table>
+  <thead>
+  <% if params[:notice].present? %>
+    <h3 class="notice_message"><%= params[:notice] %></h3>
+  <% end %>
+  <tr>
+    <th>ItemTaxID</th>
+    <th>ItemID</th>
+    <th>TaxType</th>
+    <th>Tax</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @item_taxes.each do |item_tax| %>
+    <tr>
+      <td><%= item_tax.id %></td>
+      <td><%= item_tax.item_id %></td>
+      <td><%= item_tax.tax_type %></td>
+      <td><%= item_tax.tax %></td>
+      <td><%= link_to "Show", item_tax %></td>
+      <td><%= link_to "Edit", edit_item_tax_path(item_tax) %></td>
+      <td><%= link_to "Destroy", item_tax, method: :delete, data: {confirm: "Are you sure?"} %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "New Item", new_item_tax_path %>
